@@ -24,6 +24,9 @@ public class Lab1 {
         z = in.nextDouble();
         Point3d point3 = new Point3d(x, y, z);
 
+        if(point1.compareWith(point2) || point2.compareWith(point3) || point3.compareWith(point1))
+            System.out.println("Некорректный ввод. Две или более точек имеют одинаковые координаты");
+        else System.out.println(computeArea(point1, point2, point3));
     }
 
     public static double computeArea(Point3d point1, Point3d point2, Point3d point3) {
