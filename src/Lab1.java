@@ -1,18 +1,15 @@
 public class Lab1 {
     public static void main(String[] args) {
-        System.out.println("Введите x, y, z координаты первой точки по очереди:");
         Point3d point1 = new Point3d(
                 Double.parseDouble(args[0]),
                 Double.parseDouble(args[1]),
                 Double.parseDouble(args[2]));
 
-        System.out.println("Введите x, y, z координаты второй точки по очереди:");
         Point3d point2 = new Point3d(
                 Double.parseDouble(args[3]),
                 Double.parseDouble(args[4]),
                 Double.parseDouble(args[5]));
 
-        System.out.println("Введите x, y, z координаты третьей точки по очереди:");
         Point3d point3 = new Point3d(
                 Double.parseDouble(args[6]),
                 Double.parseDouble(args[7]),
