@@ -16,7 +16,7 @@ public class Lab1 {
                 Double.parseDouble(args[8]));
 
         if (point1.compareWith(point2) || point2.compareWith(point3) || point3.compareWith(point1))
-            System.out.println("Некорректный ввод. Две или более точек имеют одинаковые координаты");
+            System.out.println("Incorrect input. Two or three points have same values.");
         else
             System.out.println(computeArea(point1, point2, point3));
     }
