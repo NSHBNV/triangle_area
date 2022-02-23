@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 // Класс трехмерной точки
 public class Point3d {
     // Далее описаны x, y, z координаты
@@ -45,5 +47,11 @@ public class Point3d {
     // Метод установки значения Z
     public void setzCoord(double z) {
         this.zCoord = z;
+    }
+
+    // Реализация метода высчитывающего расстояние между двумя точками
+    public double distanceTo(Point3d point) {
+        return Math.sqrt(Math.pow(this.xCoord - point.xCoord, 2) + Math.pow(this.yCoord - point.yCoord, 2) +
+                Math.pow(this.zCoord - point.zCoord, 2));
     }
 }
