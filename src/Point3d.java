@@ -49,6 +49,11 @@ public class Point3d {
         this.zCoord = z;
     }
 
+    // Метод проверки на равенство двух объектов Point3d
+    public boolean compareWith(Point3d point){
+        return this.equals(point);
+    }
+
     // Реализация метода высчитывающего расстояние между двумя точками
     public double distanceTo(Point3d point) {
         return Math.sqrt(Math.pow(this.xCoord - point.xCoord, 2) + Math.pow(this.yCoord - point.yCoord, 2) +
