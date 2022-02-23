@@ -24,7 +24,7 @@ public class Lab1 {
         z = in.nextDouble();
         Point3d point3 = new Point3d(x, y, z);
 
-        if(point1.compareWith(point2) || point2.compareWith(point3) || point3.compareWith(point1))
+        if (point1.compareWith(point2) || point2.compareWith(point3) || point3.compareWith(point1))
             System.out.println("Некорректный ввод. Две или более точек имеют одинаковые координаты");
         else System.out.println(computeArea(point1, point2, point3));
     }
@@ -35,7 +35,7 @@ public class Lab1 {
         a = point1.distanceTo(point2);
         b = point2.distanceTo(point3);
         c = point3.distanceTo(point1);
-        p = a + b + c;
+        p = (a + b + c) / 2;
 
         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
     }
