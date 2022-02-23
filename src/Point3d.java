@@ -3,7 +3,7 @@ import java.math.RoundingMode;
 
 // Класс трехмерной точки
 public class Point3d extends Point2d {
-    // Далее описаны x, y, z координаты
+    // Далее описана z координата
     private double zCoord;
 
     // Конструктор по умолчанию
