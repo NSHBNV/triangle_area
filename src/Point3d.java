@@ -1,12 +1,9 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DecimalFormat;
 
 // Класс трехмерной точки
-public class Point3d {
+public class Point3d extends Point2d {
     // Далее описаны x, y, z координаты
-    private double xCoord;
-    private double yCoord;
     private double zCoord;
 
     // Конструктор по умолчанию
@@ -16,34 +13,13 @@ public class Point3d {
 
     // Конструктор инициализации
     public Point3d(double x, double y, double z) {
-        this.xCoord = x;
-        this.yCoord = y;
+        super(x, y);
         this.zCoord = z;
-    }
-
-    // Метод получения поля X
-    public double getxCoord() {
-        return xCoord;
-    }
-
-    // Метод получения поля Y
-    public double getyCoord() {
-        return yCoord;
     }
 
     // Метод получения поля Z
     public double getzCoord() {
         return zCoord;
-    }
-
-    // Метод установки значения X
-    public void setxCoord(double x) {
-        this.xCoord = x;
-    }
-
-    // Метод установки значения Y
-    public void setyCoord(double y) {
-        this.yCoord = y;
     }
 
     // Метод установки значения Z
@@ -52,7 +28,7 @@ public class Point3d {
     }
 
     // Метод проверки на равенство двух объектов Point3d
-    public boolean compareWith(Point3d point){
+    public boolean compareWith(Point3d point) {
         return this.equals(point);
     }
 

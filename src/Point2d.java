@@ -1,14 +1,14 @@
 //Двумерный класс точки
 public class Point2d {
     //Координата X
-    private double xCoord;
+    protected double xCoord;
     //Координата Y
-    private double yCoord;
+    protected double yCoord;
 
     //Конструктор инициализации
     public Point2d(double x, double y) {
-        xCoord = x;
-        yCoord = y;
+        this.xCoord = x;
+        this.yCoord = y;
     }
 
     //Конструктор по умолчанию
