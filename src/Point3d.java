@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 // Класс трехмерной точки
@@ -56,7 +58,10 @@ public class Point3d {
 
     // Реализация метода высчитывающего расстояние между двумя точками
     public double distanceTo(Point3d point) {
-        return Math.sqrt(Math.pow(this.xCoord - point.xCoord, 2) + Math.pow(this.yCoord - point.yCoord, 2) +
+        double d = Math.sqrt(Math.pow(this.xCoord - point.xCoord, 2) + Math.pow(this.yCoord - point.yCoord, 2) +
                 Math.pow(this.zCoord - point.zCoord, 2));
+        BigDecimal bd = new BigDecimal(Double.toString(d));
+        bd = bd.setScale(2, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 }
