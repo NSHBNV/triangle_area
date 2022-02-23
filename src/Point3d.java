@@ -29,7 +29,7 @@ public class Point3d extends Point2d {
 
     // Метод проверки на равенство двух объектов Point3d
     public boolean compareWith(Point3d point) {
-        return this.equals(point);
+        return this.xCoord == point.xCoord && this.yCoord == point.yCoord && this.zCoord == point.zCoord;
     }
 
     // Реализация метода высчитывающего расстояние между двумя точками
